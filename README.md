@@ -32,7 +32,7 @@ https://github.com/smil-thakur/Just-Jot/assets/75114432/aad6c084-a142-4fb5-844e-
 
 ## Demo
 
-You can check out a live demo of **Just Jot** [here](#insert-demo-link).
+You can check out a live demo of **Just Jot** [here](https://smil-thakur.github.io/Just-Jot/).
 
 ## Images
 
