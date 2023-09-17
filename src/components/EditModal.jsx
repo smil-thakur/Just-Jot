@@ -24,7 +24,7 @@ const EditModal = ({ isOpen, onClose, color, handleEditNote, ptitle, pbody, time
         },
     };
 
-    const style = `relative h-52 w-36 md:w-60 md:h-60 m-2 rounded-lg bg-[${color}]`
+    const style = `relative h-52 w-36 md:w-60 md:h-60 m-2 rounded-lg`
 
 
     const [title, setTitle] = useState(ptitle)
@@ -58,7 +58,7 @@ const EditModal = ({ isOpen, onClose, color, handleEditNote, ptitle, pbody, time
                     <button onClick={onClose} className=" text-gray-500 hover:text-gray-700">
                         X
                     </button>
-                    <div className={style}>
+                    <div className={style} style={{ backgroundColor: color }}>
                         <div className="p-2">
                             <div className="font-bold">
                                 <input maxLength={20} onChange={handleTitle} value={title} placeholder="Your Title" className="bg-transparent placeholder:text-black" />

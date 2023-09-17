@@ -23,9 +23,10 @@ const NoteCard = ({ note, index, handleDelete, openEditModal }) => {
     ];
 
     let random = Math.floor(Math.random() * colors.length)
-    const style = `relative h-52 w-36 md:w-60 md:h-60 m-2 rounded-lg bg-[${colors[random]}]`
+    const style = `relative h-52 w-36 md:w-60 md:h-60 m-2 rounded-lg`
+    const color = `background-color:${colors[random]}`
     return (
-        <div className={style}>
+        <div className={style} style={{ backgroundColor: colors[random] }}>
 
             <div className="p-2">
                 <div className="flex font-bold items-center justify-between">
