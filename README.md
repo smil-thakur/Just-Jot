@@ -25,6 +25,15 @@
 
 You can check out a live demo of **Just Jot** [here](https://smil-thakur.github.io/Just-Jot/).
 
+## images
+
+<img width="1440" alt="Screenshot 2023-09-18 at 4 00 24 AM" src="https://github.com/smil-thakur/Just-Jot/assets/75114432/931c9cdf-5233-4f18-95ab-98435254dd40">
+
+<img width="1440" alt="Screenshot 2023-09-18 at 4 00 27 AM" src="https://github.com/smil-thakur/Just-Jot/assets/75114432/4129566e-3d95-4354-a1cc-075162ba26af">
+
+<img width="1440" alt="Screenshot 2023-09-18 at 4 00 31 AM" src="https://github.com/smil-thakur/Just-Jot/assets/75114432/cffe8069-760a-4bb4-aa6b-3dea59b5300c">
+
+
 ## Getting Started
 
 Follow these instructions to set up and run **Just Jot** locally on your machine.
