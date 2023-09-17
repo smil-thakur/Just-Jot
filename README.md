@@ -33,6 +33,13 @@ You can check out a live demo of **Just Jot** [here](https://smil-thakur.github.
 
 <img width="1440" alt="Screenshot 2023-09-18 at 4 00 31 AM" src="https://github.com/smil-thakur/Just-Jot/assets/75114432/cffe8069-760a-4bb4-aa6b-3dea59b5300c">
 
+## video
+
+
+https://github.com/smil-thakur/Just-Jot/assets/75114432/96539b6f-fbac-4399-b70e-db19ad7bf56c
+
+
+
 
 ## Getting Started
 
