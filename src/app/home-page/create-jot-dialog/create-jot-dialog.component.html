@@ -1,0 +1,28 @@
+<h4 mat-dialog-title>New Jot</h4>
+
+<mat-dialog-content class="dialogContentContainer">
+    <mat-form-field class="titleInput">
+        <mat-label>
+            Title
+        </mat-label>
+        <input type="text" matInput placeholder="Title.." [formControl]="formTitle">
+        @if (formTitle.invalid) {
+        <mat-error>{{titleErrorMessage()}}</mat-error>
+        }
+    </mat-form-field>
+    <mat-slide-toggle class="cloudToggle" [(ngModel)]="saveToCloud" (change)="onToggleChange()"
+        [disabled]="!isCloudEnabled">{{ isCloudEnabled? "Save to cloud": "Login to save to cloud"}}</mat-slide-toggle>
+    <mat-form-field class="contentInput">
+        <mat-label>Jot here</mat-label>
+        <textarea matInput placeholder="Content..." [formControl]="formBody"></textarea>
+        @if (formBody.invalid) {
+        <mat-error>{{bodyErrorMessage()}}</mat-error>
+        }
+    </mat-form-field>
+    {{this.data.dateTime}}
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-flat-button (click)="onCancel()">Cancel</button>
+    <button mat-flat-button (click)="onSubmit()" [disabled]="formBody.invalid || formTitle.invalid">Jot It</button>
+</mat-dialog-actions>

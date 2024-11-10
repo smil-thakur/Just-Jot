@@ -1,0 +1,21 @@
+<app-menu-bar></app-menu-bar>
+<app-create-jot (onSearchKeywordChange)="onSearch($event)" (data)="onJotDataReceived($event)"></app-create-jot>
+<div class="spinner-container" *ngIf="isCloudSyncOn && !isSearching">
+    <h4>Loading cloud data!</h4>
+    <mat-spinner></mat-spinner>
+</div>
+<div *ngIf="!isSearching">
+    <app-cloud-jots-list-view *ngIf="!isCloudSyncOn" [jots]="cloudJots" (OnjotDelete)="onCloudJotDelete($event)"
+        (changedJotData)="onChangedCloudJotData($event)"></app-cloud-jots-list-view>
+    <mat-divider> </mat-divider>
+    <app-public-jots-list-view [jots]="jots" (Onjotschange)="onChangedJotsRecieved($event)"
+        (changedJotUUID)="changedJotUUID($event)"></app-public-jots-list-view>
+</div>
+
+<div *ngIf="isSearching" @fadeInOut>
+    <app-cloud-jots-list-view *ngIf="!isCloudSyncOn" [jots]="cloudJotsSearched" (OnjotDelete)="onCloudJotDelete($event)"
+        (changedJotData)="onChangedCloudJotData($event)"></app-cloud-jots-list-view>
+    <mat-divider> </mat-divider>
+    <app-public-jots-list-view [jots]="jotsSearched" (Onjotschange)="onChangedJotsRecieved($event)"
+        (changedJotUUID)="changedJotUUID($event)"></app-public-jots-list-view>
+</div>

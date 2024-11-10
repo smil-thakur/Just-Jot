@@ -1,0 +1,9 @@
+<div class="title">
+    <h4>Local Jots</h4>
+
+</div>
+<div class="jotContainer">
+    <div *ngFor="let jot of jots">
+        <app-jot-card [jot]="jot" (onDelete)="onDeleteClicked($event)" (onEdit)="onEditClicked($event)"></app-jot-card>
+    </div>
+</div>

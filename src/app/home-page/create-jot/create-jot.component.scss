@@ -1,0 +1,29 @@
+.create-jot-container {
+  --mat-form-field-container-height: 36px;
+  --mat-form-field-container-vertical-padding: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+
+  mat-form-field {
+    width: 400px;
+  }
+  button {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 531px) {
+  .create-jot-container {
+    align-items: center;
+    mat-form-field {
+      width: 320px;
+    }
+    button {
+      margin-left: 0px;
+      margin-bottom: 20px;
+    }
+    flex-direction: column;
+  }
+}

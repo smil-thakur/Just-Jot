@@ -1,0 +1,17 @@
+.dialogContentContainer {
+  display: flex;
+  flex-direction: column;
+
+  .contentInput {
+    width: 300px;
+    textarea {
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 531px) {
+  .dialogContentContainer {
+    overflow-x: hidden;
+  }
+}

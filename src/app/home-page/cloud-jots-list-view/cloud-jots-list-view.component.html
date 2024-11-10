@@ -1,0 +1,15 @@
+<div class="title">
+    <h4>Cloud Jots</h4>
+
+</div>
+<div class="login-btn-container" *ngIf="showLoginButton">
+    <h4>Please login to sync jots with cloud</h4>
+    <button mat-flat-button (click)="login()">Login</button>
+
+</div>
+
+<div class="jotContainer" *ngIf="showLogoutButton">
+    <div *ngFor="let jot of jots">
+        <app-jot-card [jot]="jot" (onDelete)="onDeleteClicked($event)" (onEdit)="onEditClicked($event)"></app-jot-card>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="create-jot-container">
+    <mat-form-field class="searchInput" appearance="outline">
+        <mat-label>
+            Search
+        </mat-label>
+        <input matInput placeholder="Search..." type="text" [formControl]="formSearch">
+    </mat-form-field>
+    <button mat-flat-button (click)="openCreateDialog()">New Jot</button>
+</div>

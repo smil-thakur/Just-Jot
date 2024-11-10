@@ -1,0 +1,12 @@
+.title {
+  margin-left: 20px;
+}
+.jotContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  max-height: 400px;
+  overflow-y: scroll;
+}

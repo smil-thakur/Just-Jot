@@ -1,0 +1,21 @@
+<mat-card class="jotCard">
+    <mat-card-header>
+        {{jot.title | titlecase}}
+    </mat-card-header>
+    <mat-divider class="divider"></mat-divider>
+    <mat-card-content>
+        {{jot.body}}
+    </mat-card-content>
+    <mat-card-actions>
+        <div class="btn-container">
+            <button mat-flat-button (click)="onDeleteClicked(jot.uuid)">Delete</button>
+            <button mat-flat-button (click)="onEditClicked(jot.uuid)" class="edit-btn">Edit</button>
+        </div>
+        <div class="date-time-container">
+            {{jot.dateTime}}
+        </div>
+
+
+    </mat-card-actions>
+
+</mat-card>
