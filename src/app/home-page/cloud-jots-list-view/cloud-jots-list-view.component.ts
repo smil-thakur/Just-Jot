@@ -47,7 +47,6 @@ export class CloudJotsListViewComponent {
     const auth = getAuth()
     const provider = new GoogleAuthProvider();
     const user = await signInWithPopup(auth, provider);
-    console.log(user);
   }
 
   async logout() {
@@ -71,13 +70,10 @@ export class CloudJotsListViewComponent {
     const editDialogRef = this.editDialog.open(EditJotDialogComponent, {
       data: this.jots.find(jot => jot.uuid === uuid)
     })
-    console.log("here 1->>>", this.jots)
 
     editDialogRef.afterClosed().subscribe((data: Jot) => {
-      console.log("data", data)
 
       if (data) {
-        console.log("howww?/")
         let newJot = this.jots.find(jot => jot.uuid === uuid);
         if (newJot) {
           newJot.title = data.title;
@@ -101,7 +97,6 @@ export class CloudJotsListViewComponent {
           this.changedJotData.emit(newJot);
         }
       }
-      console.log("here 2->>>", this.jots)
 
     })
 

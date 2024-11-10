@@ -41,7 +41,6 @@ export class MainPageComponent implements OnInit, AfterViewInit {
 
   constructor(public firestore: Firestore) {
     this.userSubscription = this.user$.subscribe((aUser: User | null) => {
-      console.log(aUser);
       this.currentUser = aUser;
       this.fetchCloudJots()
     })
@@ -116,10 +115,6 @@ export class MainPageComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.jots = LocalStorageMethods.getLocally();
-    console.log(this.jots)
-    while (this.jots.length < 20) {
-      this.jots.push(...this.jots.slice(0, 20 - this.jots.length));
-    }
     this.jots = this.jots.sort((a, b) => {
       const dateA = this.parseDate(a.dateTime);
       const dateB = this.parseDate(b.dateTime);
@@ -128,7 +123,6 @@ export class MainPageComponent implements OnInit, AfterViewInit {
   }
 
   async onJotDataReceived(data: Jot) {
-    console.log(data.saveToCloud);
     if (data.saveToCloud === null || data.saveToCloud === false) {
       this.jots.push(data);
       LocalStorageMethods.saveLocally(this.jots);
@@ -155,7 +149,6 @@ export class MainPageComponent implements OnInit, AfterViewInit {
 
 
   changedJotUUID(value: string) {
-    console.log("this is the changed jot uuid", value)
   }
 
 
@@ -175,7 +168,6 @@ export class MainPageComponent implements OnInit, AfterViewInit {
   }
 
   async onChangedCloudJotData(newJot: Jot) {
-    console.log("i reached here")
     if (this.currentUser) {
       await CloudStorageMethods.updateCloudJot(this.firestore, newJot, this.currentUser.uid);
       await this.fetchCloudJots();

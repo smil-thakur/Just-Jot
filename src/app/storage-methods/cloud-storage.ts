@@ -13,7 +13,6 @@ export class CloudStorageMethods {
             body: body,
             dateTime: date
         });
-        console.log("Document written with ID: ", docRef.id);
     }
 
     static async getCloudJots(firestore: Firestore, userId: string,): Promise<Jot[]> {
@@ -36,9 +35,6 @@ export class CloudStorageMethods {
             dateTime: newJot.dateTime,
             uuid: docRef.id
         })
-
-        console.log("set Doc completed")
-
     }
 
     static async deleteCloudJot(firestore: Firestore, uuid: string, userId: string,) {

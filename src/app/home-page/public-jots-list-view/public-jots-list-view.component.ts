@@ -29,7 +29,6 @@ export class PublicJotsListViewComponent {
   }
 
   onEditClicked(uuid: string) {
-    console.log(uuid);
     const editDialogRef = this.editDialog.open(EditJotDialogComponent, {
       data: this.jots.find(jot => jot.uuid === uuid)
     })

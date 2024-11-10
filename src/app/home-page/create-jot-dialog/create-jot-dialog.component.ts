@@ -39,7 +39,6 @@ export class CreateJotDialogComponent {
 
   constructor(public firestore: Firestore) {
     this.userSubscription = this.user$.subscribe((aUser: User | null) => {
-      console.log(aUser);
       if (aUser) {
         this.isCloudEnabled = true;
       }
@@ -91,7 +90,6 @@ export class CreateJotDialogComponent {
   }
 
   onToggleChange() {
-    console.log(this.saveToCloud);
   }
 
   onSubmit() {
